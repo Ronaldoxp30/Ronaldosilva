@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Compra e Venda</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="img/a162c647-19c6-41c7-9978-f0bba1f14e64.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Compra e Venda</h1>
+        <div class="calculadora">
+            <div class="input-section">
+                <img src="img/a162c647-19c6-41c7-9978-f0bba1f14e64.jpg" alt="" width="150" height="150">
+                <h2>Preenchimento Manual</h2>
+                
+                <label for="compra">Compra:</label>
+                <input type="number" id="compra" placeholder="Valor da compra">
+
+                <label for="valorVenda">Valor de Venda:</label>
+                <input type="number" id="valorVenda" placeholder="Valor de venda">
+
+                <label for="ipi">IPI:</label>
+                <input type="number" id="ipi" placeholder="Valor do IPI (%)">
+
+                <label for="pis_cofins">Pis Cofins:</label>
+                <input type="number" id="pis_cofins" placeholder="3,65%">
+
+                <label for="icms">Icms:</label>
+                <input type="number" id="icms" placeholder="20,5%">
+
+                <label for="cred_icms">Crédito ICMS:</label>
+                <input type="number" id="cred_icms" placeholder="Valor do ICMS (%)">
+
+                <label for="frete">Frete (%):</label>
+                <input type="number" id="frete" placeholder="Frete (%)">
+
+                <label for="desconto">Desconto (%):</label>
+                <input type="number" id="desconto" placeholder="Desconto (%)">
+            </div>
+
+            <div class="table-section">
+                <h2>Tabela</h2>
+                <table id="tabelaDivisores">
+                    <thead>
+                        <tr>
+                            <th>Tabela</th>
+                            <th>Resultado IPI</th>
+                            <th>Resultado Crédito ICMS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="number" class="valor-dividir" placeholder="Valor" oninput="calcularTabela()"></td>
+                            <td><input type="number" class="resultado-ipi" placeholder="Resultado IPI" readonly></td>
+                            <td><input type="number" class="resultado-cred-icms" placeholder="Resultado Crédito ICMS" readonly></td>
+                        </tr>
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="result-section">
+                <h2>Resultados</h2>
+                <label for="preco_compra">Preço de Compra + IPI:</label>
+                <input type="number" id="preco_compra" readonly>
+
+                <label for="cred_icms_result">Crédito de ICMS:</label>
+                <input type="number" id="cred_icms_result" readonly>
+
+                <label for="preco_venda">Preço de Venda:</label>
+                <input type="number" id="preco_venda" readonly>
+
+                <label for="pis_cofins">Pis Cofins:</label>
+                <input type="number" id="pis_cofins_result" readonly>
+
+                <label for="icms_result">Icms:</label>
+                <input type="number" id="icms_result" readonly>
+
+                <label for="custo_final">Custo Final:</label>
+                <input type="number" id="custo_final" readonly>
+
+                <label for="margem">Margem (%):</label>
+                <input type="number" id="margem" readonly>
+
+                <label for="resultadoFrete">Resultado do Frete:</label>
+                <input type="number" id="resultadoFrete" readonly>
+
+                <label for="resultadoTabela">Resultado Total da Tabela:</label>
+                <input type="number" id="resultadoTabela" readonly>
+            </div>
+
+            <button onclick="calcular()">Calcular</button>
+        </div>
+    </div>
+    <footer>
+        <p>Desenvolvido por: <b>Ronaldo Silva dos Santos</b></p>
+        <p>Contato: <b>73991161995</b></p>
+        <div class="icones">
+            <a href="https://www.instagram.com/rony_silva79/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100008265452387"><i class="bi bi-facebook"></i></a>
+            <a href="https://wa.me/73991161995"><i class="bi bi-whatsapp"></i></a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
