@@ -20,8 +20,8 @@ function calcular() {
     const totalDivisaoTabela = calcularTabela();
     const precoCompraFinal = precoCompra * (1 + ipi / 100) - (totalDivisaoTabela / (1 + ipi / 100));
     
-    // Cálculo do Crédito ICMS
-    const creditoICMS = (credICMS * compra) / 100;
+    // Cálculo do Crédito ICMS considerando o preço de compra com desconto
+    const creditoICMS = (credICMS * precoCompra) / 100;
 
     // **ICMS fixo** (20,5% do preço de venda)
     const valorICMS = valorVenda * 20.5 / 100;
