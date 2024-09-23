@@ -9,7 +9,7 @@ function calcular() {
 
     // Validação de campos obrigatórios
     if (isNaN(valorVenda) || isNaN(compra)) {
-        alert("Por favor, preencha os campos de Valor de Venda e Compra corretamente.");
+      
         return;
     }
 
